@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Short Form Content XP Bar",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "action": {
     "default_popup": "index.html",
     "default_title": "Open Extension App"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["src/content_scripts/content_script.tsx"]
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["src/contentScripts/ContentScript.tsx"]
     }
   ],
   "background": {
