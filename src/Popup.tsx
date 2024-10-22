@@ -1,20 +1,16 @@
 import { StrictMode, useState } from "react";
 import viteLogo from "/vite.svg";
 import { createRoot } from "react-dom/client";
+import "./tailwind.css";
 
 function Popup() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+    <div className="p-4 min-w-36">
+      <h1>XP Bar</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button className="btn" onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
@@ -24,7 +20,7 @@ function Popup() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </div>
   );
 }
 

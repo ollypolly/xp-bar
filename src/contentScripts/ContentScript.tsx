@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import styles from "./index.css?inline";
+import styles from "../tailwind.css?inline";
 
 function ContentScript() {
   return (
     <>
       <h1 className="text-white">XP BAR</h1>
-      <button className="p-6 rounded red">Increment</button>
+      <button className="btn">Hello daisyUI</button>
     </>
   );
 }
