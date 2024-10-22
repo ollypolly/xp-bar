@@ -1,28 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import styles from "./index.css?inline";
 
 function ContentScript() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="text-white">XP BAR</h1>
-        <button className="p-6 rounded red">Increment</button>
-      </header>
-    </div>
+    <>
+      <h1 className="text-white">XP BAR</h1>
+      <button className="p-6 rounded red">Increment</button>
+    </>
   );
 }
 
-let shortsContainer = document.getElementById("search-container");
+let searchContainer = document.getElementById("search-container");
 
-const shadow = shortsContainer?.attachShadow({ mode: "open" });
+const shadow = searchContainer?.attachShadow({ mode: "open" });
 
-const div = document.createElement("div");
-div.setAttribute("id", "extension");
-shadow?.appendChild(div);
+const extensionRoot = document.createElement("div");
+extensionRoot.setAttribute("id", "extension-root");
 
-ReactDOM.createRoot(div).render(
-  <React.StrictMode>
-    <ContentScript />
-  </React.StrictMode>
-);
+const sheet = new CSSStyleSheet();
+sheet.replaceSync(styles);
+if (shadow) {
+  shadow.adoptedStyleSheets = [sheet];
+
+  shadow.appendChild(extensionRoot);
+
+  ReactDOM.createRoot(extensionRoot).render(
+    <React.StrictMode>
+      <ContentScript />
+    </React.StrictMode>
+  );
+}
