@@ -3,7 +3,7 @@
   "name": "Short Form Content XP Bar",
   "version": "0.0.1",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "index.html",
     "default_title": "Open Extension App"
   },
   "content_scripts": [
