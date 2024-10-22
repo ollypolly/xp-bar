@@ -1,21 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
 function ContentScript() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ContentScript</h1>
+        <h1 className="text-white">XP BAR</h1>
+        <button className="p-6 rounded red">Increment</button>
       </header>
     </div>
   );
 }
 
-const index = document.createElement("div");
-index.id = "content-script";
-document.body.appendChild(index);
+let shortsContainer = document.getElementById("search-container");
 
-ReactDOM.createRoot(index).render(
+const shadow = shortsContainer?.attachShadow({ mode: "open" });
+
+const div = document.createElement("div");
+div.setAttribute("id", "extension");
+shadow?.appendChild(div);
+
+ReactDOM.createRoot(div).render(
   <React.StrictMode>
     <ContentScript />
   </React.StrictMode>

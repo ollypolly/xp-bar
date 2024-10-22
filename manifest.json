@@ -8,7 +8,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*/*", "http://*/*"],
+      "matches": ["https://www.youtube.com/shorts/*"],
       "js": ["src/contentScripts/ContentScript.tsx"]
     }
   ],
