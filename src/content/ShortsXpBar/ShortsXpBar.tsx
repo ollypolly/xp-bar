@@ -3,12 +3,7 @@ import { Button } from "../../components/Button";
 export const ShortsXpBar = () => {
   return (
     <div data-theme="dark" className="bg-transparent">
-      <div
-        style={{
-          zIndex: 99999,
-        }}
-        className="w-80 p-4 top-14 relative flex justify-center"
-      >
+      <div className="p-4 top-14 relative flex justify-center w-10/12 z-50">
         <progress
           style={{
             height: "1.75rem",
