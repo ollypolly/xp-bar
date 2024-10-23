@@ -9,11 +9,11 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/shorts/*"],
-      "js": ["src/content/XpBar.tsx"]
+      "js": ["src/content/ShortsXpBar/index.tsx"]
     }
   ],
   "background": {
-    "service_worker": "src/background.ts",
+    "service_worker": "src/background/index.ts",
     "type": "module"
   },
   "permissions": [

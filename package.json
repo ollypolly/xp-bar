@@ -17,6 +17,7 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "^2.0.0-beta.25",
     "@eslint/js": "^9.11.1",
+    "@thedutchcoder/postcss-rem-to-px": "^0.0.2",
     "@types/chrome": "^0.0.278",
     "@types/node": "^22.7.9",
     "@types/react": "^18.3.10",
@@ -28,6 +29,7 @@
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
+    "postcss-prefix-selector": "^2.1.0",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
