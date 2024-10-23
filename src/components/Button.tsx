@@ -1,5 +1,12 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-export const Button = ({ children }: { children: ReactNode }) => {
-  return <button className="btn">{children}</button>;
+export const Button = ({
+  children,
+  ...rest
+}: ButtonHTMLAttributes<HTMLButtonElement> & { children: ReactNode }) => {
+  return (
+    <button {...rest} className="btn">
+      {children}
+    </button>
+  );
 };

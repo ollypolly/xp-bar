@@ -1,21 +1,18 @@
-import { Button } from "../../components/Button";
-
 export const ShortsXpBar = () => {
   return (
-    <div data-theme="dark" className="bg-transparent">
-      <div className="p-4 top-14 relative flex justify-center w-10/12 z-50">
+    <div className="flex justify-center">
+      <div
+        style={{
+          zIndex: 9999,
+        }}
+        data-theme="dark"
+        className="shadow-lg m-4 p-4 rounded-lg w-3/5 relative"
+      >
         <progress
-          style={{
-            height: "1.75rem",
-          }}
-          className="progress progress-success w-full h-7"
-          value="10"
-          max="100"
-        ></progress>
-        <div>
-          <Button>Increase XP</Button>
-          <Button>Decrease XP</Button>
-        </div>
+          className="progress progress-error h-7 "
+          value={40}
+          max={100}
+        >{`${40}/100`}</progress>
       </div>
     </div>
   );
