@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/shorts/*"],
-      "js": ["src/contentScripts/ContentScript.tsx"]
+      "js": ["src/content/XpBar.tsx"]
     }
   ],
   "background": {
