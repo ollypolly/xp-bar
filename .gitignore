@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 tsconfig.tsbuildinfo
+tsconfig.chrome.tsbuildinfo
+tsconfig.vite.tsbuildinfo
